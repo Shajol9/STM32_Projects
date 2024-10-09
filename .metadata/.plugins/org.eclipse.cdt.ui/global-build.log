@@ -1,0 +1,35 @@
+15:07:12 **** Incremental Build of configuration Debug for project LED_toglling_using_structures_and_bitfields ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F303VCTx -DSTM32 -DSTM32F3 -DSTM32F3DISCOVERY -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "LED_toglling_using_structures_and_bitfields.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\shazz\Downloads\Courses\embedded_c_course\myCodes\host\LED_toglling_using_structures_and_bitfields\STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_toglling_using_structures_and_bitfields.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED_toglling_using_structures_and_bitfields.elf
+ 
+arm-none-eabi-size  LED_toglling_using_structures_and_bitfields.elf 
+arm-none-eabi-objdump -h -S LED_toglling_using_structures_and_bitfields.elf  > "LED_toglling_using_structures_and_bitfields.list"
+   text	   data	    bss	    dec	    hex	filename
+    796	      0	   1568	   2364	    93c	LED_toglling_using_structures_and_bitfields.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED_toglling_using_structures_and_bitfields.list
+ 
+15:07:33 **** Incremental Build of configuration Debug for project LED_toglling_using_structures_and_bitfields ****
+make -j8 all 
+arm-none-eabi-size  LED_toglling_using_structures_and_bitfields.elf 
+   text	   data	    bss	    dec	    hex	filename
+    796	      0	   1568	   2364	    93c	LED_toglling_using_structures_and_bitfields.elf
+Finished building: default.size.stdout
+ 
+15:08:26 **** Incremental Build of configuration Debug for project LED_toglling_using_structures_and_bitfields ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F303VCTx -DSTM32 -DSTM32F3 -DSTM32F3DISCOVERY -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "LED_toglling_using_structures_and_bitfields.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\shazz\Downloads\Courses\embedded_c_course\myCodes\host\LED_toglling_using_structures_and_bitfields\STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_toglling_using_structures_and_bitfields.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED_toglling_using_structures_and_bitfields.elf
+ 
+arm-none-eabi-size  LED_toglling_using_structures_and_bitfields.elf 
+arm-none-eabi-objdump -h -S LED_toglling_using_structures_and_bitfields.elf  > "LED_toglling_using_structures_and_bitfields.list"
+   text	   data	    bss	    dec	    hex	filename
+    796	      0	   1568	   2364	    93c	LED_toglling_using_structures_and_bitfields.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED_toglling_using_structures_and_bitfields.list
+ 

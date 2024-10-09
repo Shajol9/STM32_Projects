@@ -1,0 +1,55 @@
+/*
+ * main.h
+ *
+ *  Created on: Oct 9, 2024
+ *      Author: shazz
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+#include <stdint.h>
+
+typedef struct {
+	uint32_t DMA1_EN 	:1;
+	uint32_t DMA2_EN 	:1;
+	uint32_t SRAM_EN 	:1;
+	uint32_t Reserved1 	:1;
+	uint32_t FLITF_EN 	:1;
+	uint32_t FMC_EN 	:1;
+	uint32_t CRC_EN 	:1;
+	uint32_t Reserved2 	:9;
+	uint32_t GPIOH_EN 	:1;
+	uint32_t GPIOA_EN 	:1;
+	uint32_t GPIOB_EN 	:1;
+	uint32_t GPIOC_EN 	:1;
+	uint32_t GPIOD_EN 	:1;
+	uint32_t GPIOE_EN 	:1;
+	uint32_t GPIOF_EN 	:1;
+	uint32_t GPIOG_EN 	:1;
+	uint32_t TSC_EN 	:1;
+	uint32_t Reserved3 	:3;
+	uint32_t ADC12_EN 	:1;
+	uint32_t ADC34_EN 	:1;
+	uint32_t Reserved4 	:2;
+}RCC_AHBNR_t;
+
+typedef struct{
+	uint32_t MODER01 :2;
+	uint32_t MODER02 :2;
+	uint32_t MODER03 :2;
+	uint32_t MODER04 :2;
+	uint32_t MODER05 :2;
+	uint32_t MODER06 :2;
+	uint32_t MODER07 :2;
+	uint32_t MODER08 :2;
+	uint32_t MODER09 :2;
+	uint32_t MODER10 :2;
+	uint32_t MODER11 :2;
+	uint32_t MODER12 :2;
+	uint32_t MODER13 :2;
+	uint32_t MODER14 :2;
+	uint32_t MODER15 :2;
+}GPIOx_MODER_t;
+
+#endif /* MAIN_H_ */

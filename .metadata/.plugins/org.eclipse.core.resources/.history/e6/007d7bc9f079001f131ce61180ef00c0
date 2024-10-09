@@ -1,0 +1,65 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 23, 2024
+ *      Author: shazz
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+float area;
+float base, height;
+float parallel1, parallel2;
+float radius;
+float side;
+float width, length;
+int main(void)
+{
+	printf("Chose the geometric shape you want to measure the area of.\n "
+			"Insert the corresponding letter for the shape\n"
+			"Shape     - insert letter\n"
+			"Triangle  -  t\n "
+			"circle    -  c\n "
+			"Trapezoid -  z\n "
+			"Square    -  s\n "
+			"Rectangle -  r\n"
+			"Insert your choice: ");
+	uint8_t choice;
+	scanf("%c",&choice);
+
+	switch(choice){
+	case 't':
+		scanf("Insert base: %f ", &base);
+		scanf("Insert height: %f ", &height);
+		area = 0.5 * base * height;
+		printf("Area of the Triangle is %f", area);
+		break;
+	case 'c':
+		scanf("Insert radius: %x ", &radius);
+		area = 3.1416 * radius * radius;
+		printf("Area of the Circle is %f", area);
+		break;
+	case 'z':
+		scanf("Insert the lengths of the parallel sides: %f %f ", &parallel1, &parallel2);
+		scanf("Insert height: %f ", &height);
+		area = (parallel1 + parallel2) * height/2;
+		printf("Area of the Trapezoid is %f", area);
+		break;
+	case 's':
+		scanf("Insert sides: %f ", &side);
+		area = side * side;
+		printf("Area of the Square is %f", area);
+		break;
+	case 'r':
+		scanf("Insert length and width: %f %f", &length, &width);
+		area = length * width;
+		printf("Area of the Rectangle is %f", area);
+		break;
+	}
+
+}
+
+
+
+

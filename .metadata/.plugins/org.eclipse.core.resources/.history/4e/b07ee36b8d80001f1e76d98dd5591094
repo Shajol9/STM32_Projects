@@ -1,0 +1,52 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 2, 2024
+ *      Author: shazz
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+struct Frame{
+	uint8_t crc;
+	uint8_t status;
+	uint16_t payload;
+	uint8_t bat;
+	uint8_t sensor;
+	uint8_t longAddress;
+	uint8_t shortAddress;
+	uint8_t addressMOde;
+};
+
+void PrintFields(struct FRAME *p_packet);
+
+int main(){
+	uint32_t packetValue;
+	printf("Enter a 32 bit packet value: ");
+	scanf("%X", &packetValue);
+	struct Frame packet;
+
+	PrintFields(&packet);
+}
+
+void PrintFields(struct FRAME *p_packet){
+	p_packet->crc = (unit8_t) (packetValue & 0x3);
+	p_packet->status = (unit8_t) ((packetValue>>2) & 0x1);
+	p_packet->payload = (unit16_t) ((packetValue>>3) & 0xfff);
+	p_packet->bat = (unit8_t) ((packetValue>>15) & 0x7);
+	p_packet->sensor = (unit8_t) ((packetValue>>18) & 0x7);
+	p_packet->longAddress = (unit8_t) ((packetValue>>21) & 0xff);
+	p_packet->shortAddress = (unit8_t) ((packetValue>>29) & 0x3);
+	p_packet->addressMode = (unit8_t) ((packetValue>>31) & 0x1);
+
+	printf("following are different segments of the packet\n");
+	printf("crc				=%x %I64u\n", packet->crc);
+	printf("statue			=%x \n", packet->status);
+	printf("payload			=%x \n", packet->payload);
+	printf("bat				=%x \n", packet->bat);
+	printf("sensor			=%x \n", packet->sensor);
+	printf("longAddress		=%x \n", packet->longAddress);
+	printf("shortAddress	=%x \n", packet->);
+	printf("addressMode		=%x \n", packet->);
+}

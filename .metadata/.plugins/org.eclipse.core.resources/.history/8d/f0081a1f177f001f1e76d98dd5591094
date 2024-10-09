@@ -1,0 +1,38 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 30, 2024
+ *      Author: shazz
+ */
+
+
+#include <stdio.h>
+#include <stdint.h>
+
+void wait_for_the_user_input(void);
+
+int main (void){
+	uint32_t height;
+	printf("Please enter the height of the pyramid: ");
+	scanf("%u\n",height);
+
+	for(int n = 0; height-n < 0 ; n++){
+		printf("%d", n);
+		--n;
+		for (;n>0;--n)
+			printf("%d", n);
+		printf("\n");
+	}
+
+	wait_for_the_user_input();
+	return 0;
+}
+
+void wait_for_the_user_input(void){
+	printf("Please press enter to end the program\n");
+
+	while(getchar()!= '\n'){
+
+	}
+	getchar();
+}

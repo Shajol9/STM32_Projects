@@ -1,0 +1,25 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 23, 2024
+ *      Author: shazz
+ */
+
+#include <stdio.h>
+
+int main(void)
+{
+	char c1 = 100;
+	printf("address of c1 is %p", c1);
+	char* p_c1 = &c1;
+	char value_c1 = *p_c1;
+	printf("value of c1 is %c", value_c1);
+	*p_c1 = 65;
+	char new_value_c1 = *p_c1;
+	printf("value of c1 after changing it by addressing with pointer p_c1 is %c", new_value_c1);
+	while(getchar()!='\n')
+	{
+
+	}
+	getchar();
+}

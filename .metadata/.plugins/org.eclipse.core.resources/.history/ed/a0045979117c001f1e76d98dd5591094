@@ -1,0 +1,56 @@
+/*
+ * calculate_tax..c
+ *
+ *  Created on: Sep 26, 2024
+ *      Author: shazz
+ */
+#include<stdio.h>
+#include<stdint.h>
+
+float get_income();
+void wait_for_user_input();
+
+int main(void)
+{
+	uint64_t income, income_tax, tax_rate;
+
+	income = (uint64_t) get_income();
+
+	if(income<=9525)
+	{
+		income_tax = 0 ;
+	}else if((9525<income) && (income<=38700)){
+		tax_rate = 12;
+		income_tax = income *(tax_rate/100);
+	}else if ((38700<income) && (income<=82500)){
+		tax_rate = 22;
+		income_tax = income *(tax_rate/100);
+	}else {
+		tax_rate = 32;
+		income_tax = (income *(tax_rate/100))+ 1000;
+	}
+
+	printf("Total Income Tax:$ %lld\n", income_tax);
+}
+
+float get_income()
+{
+	uint64_t x;
+	printf("Input your annual in dollars:$");
+	scanf("%f\n",&x);
+	if (x<0)
+	{
+		printf("Income can not be negative!\n");
+		get_income();
+	}
+
+	return x;
+}
+
+void wait_for_user_input(void){
+	printf("Press enter to terminate the program!\n");
+	while(getchar()!='\n'){
+
+	}
+	getchar();
+}

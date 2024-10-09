@@ -1,0 +1,41 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 23, 2024
+ *      Author: shazz
+ */
+
+#include <stdio.h>
+
+long long data = 0x0F85E47D889CF8A01;
+
+int main(void)
+{
+	char c1 = 100;
+	printf("Address of c1 is %p", &c1);
+	char* p_c1 = &c1;
+	char value_c1 = *p_c1;
+	printf("\nValue of c1 is %d", value_c1);
+	*p_c1 = 65;
+	char new_value_c1 = *p_c1;
+	printf("\nValue of c1 after changing it by addressing with pointer p_c1 is %d", new_value_c1);
+
+	printf("The address if data variable is %p", &data)
+	char *p_address;
+	p_address = (char*) &data;
+	printf("Value at the address %p is %d",p_address, *p_address);// p_address should yeald in the address where the pointer variable is stored and *p_address is dereferencing the pointer to get the value of data variable
+
+	int *p_address;
+	p_address = (int*) &data;
+	printf("Value at the address %p is %d",p_address, *p_address);
+
+	long long *p_address;
+	p_address = (long long*) &data;
+	printf("Value at the address %p is %d",p_address, *p_address);
+
+	while(getchar()!='\n')
+	{
+
+	}
+	getchar();
+}

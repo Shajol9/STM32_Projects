@@ -1,0 +1,17 @@
+/*
+ * main.h
+ *
+ *  Created on: Oct 9, 2024
+ *      Author: shazz
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+typedef struct {
+	uint8_t DMA1EN = ;
+
+}RCC_AHBNR ;
+
+
+#endif /* MAIN_H_ */
